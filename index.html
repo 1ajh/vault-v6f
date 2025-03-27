@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="index.css">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <title>AJH's Vault V6-f</title>
       <meta name="description" content="An educational resource for students, featuring interactive tools and web-based applications to enhance learning.">
       <link rel="icon" href="/icon.png" type="image/png">
@@ -17,10 +22,22 @@
       <meta name="twitter:image" content="icon.png">
       <meta property="og:site_name" content="AJH's Vault V6-f">
       <meta name="theme-color" content="#000000">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <link rel="stylesheet" href="index.css">
+   
+      <!-- Structured Data Schema -->
+      <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "AJH's Vault V6-f - Learning Hub",
+          "url": "https://ajh.college",
+          "logo": "icon.png",
+          "description": "An interactive hub for students to access various web-based tools and applications.",
+          "sameAs": [
+              "https://www.instagram.com/@ajhsvault",
+              "https://discord.com/invite/UnDrzQQksw"
+          ]
+      }
+      </script>
       <script>
           tailwind.config = {
               theme: {
@@ -40,72 +57,77 @@
           }
       </script>
       <style>
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-          body {
-              color: #fff;
-              margin: 0;
-              padding: 0;
-              font-family: 'Inter', 'Verdana', 'Arial', sans-serif !important;
-              background: #111;
-          }
-          #canvas {
-              display: block;
+          canvas {
               position: fixed;
               top: 0;
               left: 0;
-              width: 100vw;
-              height: 100vh;
-              pointer-events: none;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
           }
       </style>
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6084312783725533" crossorigin="anonymous" type="a6cbfc5760b43ebb773269cb-text/javascript"></script>
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-03F8ZHB8D8%22%3E" type="a6cbfc5760b43ebb773269cb-text/javascript">
+         </script>
+         <script type="a6cbfc5760b43ebb773269cb-text/javascript">
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){
+         dataLayer.push(arguments);
+         }
+         gtag('js', new Date());
+         gtag('config', 'G-03F8ZHB8D8');
+         </script>
    </head>
    <body class="bg-neutral-950">
       <canvas id="canvas"></canvas>
       <div class="text-white min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
-         <div class="container text-center max-w-md relative">
-            <div class="flex items-center justify-center space-x-4">
-               <div id="logo" class="text-5xl font-bold opacity-0 animate-de-entrance bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-white">
-                  Vault v6-f
-               </div>
-               <a href="/g" class="px-12 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white hover:bg-neutral-700 transition-all duration-300 self-center translate-x-5">
-                  🎮 Games
-               </a>
-            </div>
-            <form id="uv-form" class="space-y-4 -translate-y-2">
-               <input id="uv-search-engine" value="https://duckduckgo.com/?q=%s" type="hidden"/> 
-               <input id="uv-address" type="text" placeholder="🔍 Freedom's awaiting you." required class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-700 transition-all duration-300"/>
-            </form>
-            <small class="text-neutral-400">
-               This is not Vault v7. Be sure to join the <a class="underline" href="https://discord.gg/UnDrzQQksw">Discord</a> for new updates.
-               <br><br>Your first search will most likely return an error. Just go back to the home page, and the service worker should register :D
-            </small>
-            <div class="desc left-margin text-neutral-400">
-               <p id="uv-error"></p>
-               <pre id="uv-error-code"></pre>
-            </div>
+      <div class="container text-center max-w-md relative">
+         <div class="flex items-center justify-center space-x-4">
+             <div id="logo" class="text-5xl font-bold opacity-0 animate-de-entrance bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-white">
+                 Vault v6-f
+             </div>
+             <a 
+                 href="/g" 
+                 class="px-12 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white hover:bg-neutral-700 transition-all duration-300 self-center translate-x-5"
+             >
+                 🎮 Games
+             </a>
          </div>
+         
+              <form id="uv-form" class="space-y-4 -translate-y-2">
+                  <input id="uv-search-engine" value="https://duckduckgo.com/?q=%s" type="hidden"/> 
+                  <input 
+                      id="uv-address" 
+                      type="text" 
+                      placeholder="🔍 Freedom's awaiting you." 
+                      required
+                      class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-700 transition-all duration-300"
+                  />
+              </form>
+              <small class="text-neutral-400">This is not Vault v7. Be sure to join the <a class="underline" href="https://discord.gg/UnDrzQQksw">Discord</a> for new updates.
+            <br><br>Your first search will most likely return an error. Just go back to the home page, and the service worker should register :D
+            </small>
+  
+              <div class="desc left-margin text-neutral-400">
+                  <p id="uv-error"></p>
+                  <pre id="uv-error-code"></pre>
+              </div>
       </div>
-      <div class="fixed bottom-0 p-4 text-neutral-400">
-         A service by <a class="underline" href="https://ajh.quest">ajh</a>
-      </div>
+   </div>
+   <div class="fixed bottom-0 p-4 text-neutral-400">
+      A service by <a class="underline" href="https://ajh.quest">ajh</a>
+   </div>
+  
       <script src="uv/uv.bundle.js" charset="UTF-8" defer></script>
       <script src="uv/uv.config.js" charset="UTF-8" defer></script>
       <script src="register-sw.js" charset="UTF-8" defer></script>
       <script src="search.js" charset="UTF-8" defer></script>
       <script src="index.js" charset="UTF-8" defer></script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6084312783725533" crossorigin="anonymous"></script>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-03F8ZHB8D8"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){ dataLayer.push(arguments); }
-         gtag('js', new Date());
-         gtag('config', 'G-03F8ZHB8D8');
-      </script>
-      <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-         new Crate({
-            server: '1260507272375963708',
-            channel: '1260507272854110240'
-         });
-      </script>
-   </body>
+  </body>
+  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+   new Crate({
+       server: '1260507272375963708',
+       channel: '1260507272854110240'
+   })
+</script>
 </html>
