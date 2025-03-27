@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/go/',
-    bare: 'https://animal-bear.ajh.boats/bare/',
+    bare: 'https://animal-bear.ajh.boats/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
